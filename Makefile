@@ -1,7 +1,7 @@
 all:
 	version=$(version) eval "echo \"$$(<Dockerfile)\"" 2> /dev/null | docker build -t docteurklein/firefox:$(version) -
 
-push:
+push: all
 	git checkout -b $(version)
 	version=$(version) eval "echo \"$$(<Dockerfile)\"" 2> /dev/null > Dockerfile
 	git commit -am"auto-build $(version)"
