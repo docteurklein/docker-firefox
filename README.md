@@ -16,3 +16,9 @@ docker-firefox
 
     version=10.0.2 make
 
+# push (auto-build)
+
+Go on the admin interface of the project and add a new tag auto-build.
+
+    version=10.0.2 push
+
